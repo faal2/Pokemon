@@ -104,5 +104,11 @@ namespace Pokemon
             attack.Use(this.Level);
         }
 
+        public void RaiseLevel()
+        {
+            this.Level += 1;
+            Console.WriteLine($"{this.Name} har levlat up. Level {this.Level} nu.");
+        }
+
     }
 }
