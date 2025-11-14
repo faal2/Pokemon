@@ -84,6 +84,13 @@ namespace Pokemon
         }
 
 
+        public void RandomAttack()
+        {
+            Attack attack = Attacks[Random.Shared.Next(Attacks.Count)];
+            attack.Use(this.Level);
+
+        }
+
         
     }
 }
