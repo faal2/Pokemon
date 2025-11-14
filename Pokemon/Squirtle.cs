@@ -16,7 +16,10 @@ namespace Pokemon
 
         public void Evolve()
         {
-
+            Console.Write($"{this.Name} is evolving...");
+            this.Name = "Wartortle";
+            this.Level += 10;
+            Console.Write($"Now it is a {this.Name} and its level is {this.Level}");
         }
 }
 }
