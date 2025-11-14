@@ -91,6 +91,18 @@ namespace Pokemon
 
         }
 
-        
+        public void Attack()
+        {
+            Console.WriteLine("Välj mellan följande attacker. Tryck på nummer och Enter.");
+            for (int i = 1; i <= Attacks.Count; i++)
+            {
+                Console.WriteLine($"{i}. {Attacks[i - 1].Name}");
+
+            }
+            int chosenAttack = int.Parse(Console.ReadLine());
+            Attack attack = Attacks[chosenAttack - 1];
+            attack.Use(this.Level);
+        }
+
     }
 }
