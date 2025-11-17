@@ -99,9 +99,20 @@ namespace Pokemon
                 Console.WriteLine($"{i}. {Attacks[i - 1].Name}");
 
             }
-            int chosenAttack = int.Parse(Console.ReadLine());
-            Attack attack = Attacks[chosenAttack - 1];
-            attack.Use(this.Level);
+            try
+            {
+                int chosenAttack = int.Parse(Console.ReadLine());
+                Attack attack = Attacks[chosenAttack - 1];
+                attack.Use(this.Level);
+
+            }
+            catch (FormatException ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Du har inte skrivit in rätt format");
+                Console.ResetColor();
+            }
+            
         }
 
         public void RaiseLevel()
