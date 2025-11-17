@@ -112,7 +112,13 @@ namespace Pokemon
                 Console.WriteLine("Du har inte skrivit in rätt format");
                 Console.ResetColor();
             }
-            
+            catch (ArgumentNullException ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Du har inte skrivit in ett tomt värde");
+                Console.ResetColor();
+            }
+
         }
 
         public void RaiseLevel()
