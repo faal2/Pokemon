@@ -13,11 +13,14 @@ namespace Pokemon
             List<Pokemon> pokemons = new ()
             {
             new Squirtle([waterthrower, waterbomb]),
+            new Squirtle([watersword])
             };
+
+            int counter = 1;
 
             foreach (var pokemon in pokemons)
             {
-                Console.WriteLine($"Använder {pokemon.Name} som är typ {pokemon.Type} och level {pokemon.Level}.");
+                Console.WriteLine($"Använder {counter}.{pokemon.Name} som är typ {pokemon.Type} och level {pokemon.Level}.");
 
                 pokemon.Attack();
 
@@ -29,6 +32,7 @@ namespace Pokemon
                 }
 
                 Console.WriteLine("\n");
+                counter++;
             }
 
 
